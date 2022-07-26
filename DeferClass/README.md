@@ -80,7 +80,7 @@ class defer 1
 
 ### 注意
 
-一下代码为错误示范
+以下代码为错误示范
 ```c++
 #include <iostream>
 #include "DeferClass.h"
