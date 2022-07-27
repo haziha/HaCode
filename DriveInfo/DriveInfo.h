@@ -47,6 +47,8 @@ public slots:
 
     void InitOnec(); // 初始化 COM 接口, 只能调用一次
 
+    bool InitSuccess() const; // 是否初始化成功
+
     void LoadAllDrive();
 
 private:

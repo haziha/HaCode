@@ -320,7 +320,8 @@ void DriveInfo::LoadAllDrive() {
                 localDrives.append(driveInfo(QString::fromStdString(Utf8Utf16::Utf16ToUtf8(vtCaption.bstrVal)),
                                              QString::fromStdString(Utf8Utf16::Utf16ToUtf8(vtDriveDeviceID.bstrVal)),
                                              QString::fromStdString(Utf8Utf16::Utf16ToUtf8(vtSerialNumber.bstrVal)),
-                                             QString::fromStdString(Utf8Utf16::Utf16ToUtf8(vtPartitionDeviceID.bstrVal)),
+                                             QString::fromStdString(
+                                                     Utf8Utf16::Utf16ToUtf8(vtPartitionDeviceID.bstrVal)),
                                              QString::fromStdString(Utf8Utf16::Utf16ToUtf8(vtLogicalDeviceID.bstrVal)),
                                              vtDriveType.ulVal));
             }
@@ -330,4 +331,8 @@ void DriveInfo::LoadAllDrive() {
 #ifdef USE_QDEBUG
     qDebug() << "load all drive finished";
 #endif
+}
+
+bool DriveInfo::InitSuccess() const {
+    return this->initSuccess;
 }
