@@ -8,12 +8,12 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-include_directories(../DeferClass ../Utf8Utf16)
+include_directories(../../DeferClass ../../Utf8Utf16)
 
 add_executable(DriveInfo
         main.cpp
@@ -21,7 +21,7 @@ add_executable(DriveInfo
         mainwindow.h
         mainwindow.ui
         DriveInfo.cpp DriveInfo.h
-        ../DeferClass/DeferClass.cpp ../DeferClass/DeferClass.h
-        ../Utf8Utf16/Utf8Utf16.cpp ../Utf8Utf16/Utf8Utf16.h)
+        ../../DeferClass/DeferClass.cpp ../../DeferClass/DeferClass.h
+        ../../Utf8Utf16/Utf8Utf16.cpp ../../Utf8Utf16/Utf8Utf16.h)
 
 target_link_libraries(DriveInfo PRIVATE Qt5::Widgets)
